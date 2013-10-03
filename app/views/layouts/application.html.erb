@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lets meet</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	<% if flash[:notice] %>
+		<p><%= flash[:notice] %></p>
+	<% end %>
+	<% if flash[:alert] %>
+		<p><%= flash[:alert] %></p>
+	<% end %>
+<%= yield %>
+
+</body>
+</html>
