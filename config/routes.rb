@@ -1,10 +1,15 @@
 Letsmeet::Application.routes.draw do
 
+  # get "posts/index"
+  # get "posts/show"
+  # get "posts/edit"
+  # get "posts/new"
   # get "sessions/new"
   # get "sessions/create"
   # get "sessions/destroy"
   resources :sessions, :only => [:new, :create, :destroy]
   resources :users
+  resources :posts
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
