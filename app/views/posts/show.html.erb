@@ -1,3 +1,8 @@
-<h1>Posts#show</h1>
+<p><%= @post.title %></p>
+<p><%= @post.url %></p>
 
-<%= link_to "Edit Post", edit_post_path %>
+
+
+<%= link_to "Back to Posts", posts_url %><br />
+<%= link_to "Edit Post", edit_post_path %><br />
+<%= link_to "Delete Post", @product, :confirm => "Are you sure you want to delete this user?", :method => :delete %>

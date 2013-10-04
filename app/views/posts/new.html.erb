@@ -1,2 +1,17 @@
-<h1>Posts#new</h1>
-<p>Find me in app/views/posts/new.html.erb</p>
+<h1>Create a New Post</h1>
+
+<%= form_for @post do |p| %>
+	<div class="field">
+		<%= p.label :title  %><br />
+		<%= p.text_field :title  %>
+	</div>
+	<br />
+	<div class="field">
+		<%= p.label :url  %><br />
+		<%= p.text_field :url  %>
+	</div>	
+
+	<%= p.submit "save" %>
+<% end %>
+
+<%= link_to "back to posts", posts_url %>
