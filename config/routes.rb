@@ -9,7 +9,11 @@ Letsmeet::Application.routes.draw do
   # get "sessions/destroy"
   root :to => 'sessions#new'
   resources :sessions, :only => [:new, :create, :destroy]
-  resources :users
+
+  resources :users do 
+    resources :posts
+  end
+  
   resources :posts
 
   # The priority is based upon order of creation: first created -> highest priority.

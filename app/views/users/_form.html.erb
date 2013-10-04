@@ -1,4 +1,4 @@
-<%= form_for @user do |form| %>
+
 	<% if @user.errors.any? %>
 		<%= pluralize(@user.errors.count, "error") %>
 		prohibited this from being saved
@@ -9,27 +9,5 @@
 		</ul>
 	<% end %>
 
-	<div class="field">
-		<%= form.label :first_name %><br />
-		<%= form.text_field :first_name %><br />
-	</div>
-	<div class="field">
-		<%= form.label :last_name %><br />
-		<%= form.text_field :last_name %>
-	</div>
-	<div class="field">
-		<%= form.label :email %><br />
-		<%= form.text_field :email %>
-	</div>	
-	<div class="field">
-		<%= form.label :password %><br />
-		<%= form.password_field :password %>
-	</div>	
-	<div class="field">
-		<%= form.label :password_confirmation %><br />
-		<%= form.password_field :password_confirmation %>
-	</div>
-<br />
-	<%= form.submit "save" %>
-<% end %>
+
 
