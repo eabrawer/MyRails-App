@@ -7,6 +7,7 @@ Letsmeet::Application.routes.draw do
   # get "sessions/new"
   # get "sessions/create"
   # get "sessions/destroy"
+  root :to => 'sessions#new'
   resources :sessions, :only => [:new, :create, :destroy]
   resources :users
   resources :posts

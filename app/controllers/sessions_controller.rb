@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
   	user = User.find_by_email(params[:email])
   	if user && user.authenticate(params[:password])
   		sessions[:user_id] = user.id
-  		redirect_to @post, :notice => "You are loged in"
+  		redirect_to @user, :notice => "You are loged in"
   	else
   		flash.now[:alert] = "You are not logged in"
   		render "new"
